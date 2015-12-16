@@ -1,0 +1,46 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+parameters:
+
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*\Presenters\*Presenter
+
+# LDAP https://github.com/fsv-dev/ldap-authenticator
+# Migrations https://nextras.org/migrations/docs/3.0/
+# Console https://github.com/Kdyby/Console/blob/master/docs/en/index.md
+
+extensions:
+    ldap: Ldap\DI\LdapExtension
+    migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
+    console: Kdyby\Console\DI\ConsoleExtension
+
+ldap:
+    server: 'ldaps://ldap.com'
+    port: 636
+    dn: 'dc=cz'
+    authenticateOption: 'strict'
+    createDatabase: FALSE
+
+migrations:
+    dir: %appDir%/../migrations
+    driver: mysql
+    dbal: nette
+
+console:
+    url: http://localhost
+
+session:
+	expiration: 14 days
+
+services:
+	- App\Forms\SignFormFactory
+	router: App\RouterFactory::createRouter
