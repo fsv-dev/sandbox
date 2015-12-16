@@ -1,4 +1,4 @@
-Nette Sandbox
+fsv-dev/sandbox
 =============
 
 Sandbox is a pre-packaged and pre-configured Nette Framework application
@@ -15,7 +15,7 @@ Installing
 The best way to install Sandbox is using Composer. If you don't have Composer yet, download
 it following [the instructions](https://doc.nette.org/composer). Then use command:
 
-		composer create-project nette/sandbox my-app
+		composer create-project fsv-dev/sandbox my-app
 		cd my-app
 
 Make directories `temp` and `log` writable. Navigate your browser
