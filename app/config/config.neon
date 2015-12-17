@@ -17,11 +17,13 @@ application:
 # LDAP https://github.com/fsv-dev/ldap-authenticator
 # Migrations https://nextras.org/migrations/docs/3.0/
 # Console https://github.com/Kdyby/Console/blob/master/docs/en/index.md
+# Translation https://github.com/Kdyby/Translation/blob/master/docs/en/index.md
 
 extensions:
     ldap: Ldap\DI\LdapExtension
     migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
     console: Kdyby\Console\DI\ConsoleExtension
+    translation: Kdyby\Translation\DI\TranslationExtension
 
 ldap:
     server: 'ldaps://ldap.com'
@@ -37,6 +39,10 @@ migrations:
 
 console:
     url: http://localhost
+
+translation:
+    default: cs
+    fallback: [cs_CZ, cs]
 
 session:
 	expiration: 14 days
