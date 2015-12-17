@@ -21,6 +21,8 @@ header('Retry-After: 300'); // 5 minutes in seconds
 
 <p>The site is temporarily down for maintenance. Please try again in a few minutes.</p>
 
+<p><small>If you have any questions, please use our <a href="http://helpdesk.fsv.cuni.cz">helpdesk</a>.</small></p>
+
 <?php
 
 exit;
