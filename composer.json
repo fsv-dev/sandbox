@@ -35,7 +35,8 @@
 		"fsv-dev/ldap-authenticator": "^0.2.4",
 		"nextras/migrations": "^3.0",
 		"kdyby/console": "^2.5",
-		"kdyby/translation": "^2.2"
+		"kdyby/translation": "^2.2",
+		"krausv/ftp-deployment": "^2.1"
 	},
 	"require-dev": {
 		"nette/tester": "~1.3"
